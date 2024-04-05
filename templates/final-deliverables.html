@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Final Deliverables</title>
+    <!-- Ensure fresh content is served -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+</head>
+<body>
+
+    <header>
+        <h1>Project Final Deliverables (Demo)</h1>
+    </header>
+
+    <main>
+        <section id="interactive-model">
+            <h2>Arrival Port Simulation - An Interactive Machine Learning Model</h2>
+            <p>Please enter your age, sex, and occupation info:</p>
+            <!-- <a href="https://github.com/vivianyz/transatlantic_voyagers/blob/main/ml_model_v1.ipynb" target="_blank">View and Run the ML Model</a> -->
+            <br>
+            <form action="/predict_port" method="post">
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age"><br><br>
+
+                <label for="sex">Sex:</label>
+                <select id="sex" name="sex">
+                    <option value="" selected>Select</option>
+                    <option value="F">F</option>
+                    <option value="M">M</option>
+                </select><br><br>
+                <label for="occ">Occupation:</label>
+                <select name="occ">
+                    <option value="" selected>Select</option>
+                    {% for item in occ_names %}
+                        <option value="{{ item }}">{{ item }}</option>
+                    {% endfor %}
+                </select>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+            {% if port_arv %}
+                <div>
+                    <h2>Prediction Result</h2>
+                    <p>Simulated Port of Arrival: <strong>**{{ port_arv }}**</strong></p>
+                </div>
+            {% endif %}
+            <p>This model leverages our comprehensive relational database to simulate and predict outcomes.</p>
+        </section>
+
+        <!-- Include other sections as needed for your deliverables -->
+        
+    </main>
+
+    <footer>
+        <p>For more information and additional resources, visit our <a href="{{ url_for('index') }}">main page</a>.</p>
+    </footer>
+
+</body>
+</html>

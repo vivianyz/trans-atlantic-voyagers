@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Imperiia Project: The Tsar's Trans-Atlantic Voyagers</title>
+
+</head>
+<body>
+    <div id="navigation">
+        <h2>The Imperiia Project: The Tsar's Trans-Atlantic Voyagers</h2>
+        <ul>
+            <li><a href="{{ url_for('project_overview') }}">Project Overview</a></li>
+            <li><a href="{{ url_for('project_overview') }}#project-team">The Research Team</a>
+                <ul>
+                    <li><a href="{{ url_for('kelly_oneill_bio') }}">Kelly O’Neil</a></li>
+                    <li><a href="{{ url_for('vivian_wei_bio') }}">Vivian Wei</a></li>
+                </ul>
+            </li>
+            <li><a href="{{ url_for('original_dataset') }}">Original Dataset</a></li>
+            <li><a href="{{ url_for('pivotal_phases') }}">Pivotal Phases</a></li>
+            <li><a href="{{ url_for('current_progress') }}">Current Progress</a>
+                <ul>
+                    <li><a href="{{ url_for('exploratory_findings') }}">Exploratory Findings & Historical Contextualization</a></li>
+                    <li><a href="{{ url_for('relational_database') }}">Relational Database</a></li>
+                    <li><a href="{{ url_for('ml_model') }}">Machine Learning Model</a></li>
+                    <li><a href="{{ url_for('publication_dissemination') }}">Publication and Dissemination</a></li>
+                </ul>
+            </li>
+            <li><a href="{{ url_for('final_deliverables') }}">Final Deliverables</a></li>
+        </ul>
+    </div>
+    
+
+
+
+<!-- Your page content goes here -->
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exploratory Findings & Historical Contextualization</title>
+    <!-- Prevent caching of this page -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- Add any additional head elements here (e.g., CSS links) -->
+</head>
+<body>
+
+    <section id="exploratory-findings">
+        <h1>Exploratory Findings & Historical Contextualization</h1>
+        <!-- Embedding the video file -->
+        <video width="500" controls>
+          <source src="{{ url_for('static', filename='videos/occupation-by-reign.mp4') }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <p><strong>Top Occupation Group Trend by Reign[Replace w/ Tableau Later]</strong></p>
+        <!-- Additional content can go here -->
+    </section>
+
+    <!-- Link back to the main page -->
+    <a href="{{ url_for('index') }}">Back to Main Page</a>
+
+</body>
+</html>
+
